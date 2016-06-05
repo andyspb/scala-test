@@ -6,14 +6,15 @@ import scala.collection.mutable
  */
 object Collections {
   val list = List();
-  
+
   def main(args: Array[String]) {
     val i: Int = 0
-    while(i<10) {
+    def ++ = i + 1
+    while (i < 10) {
       list :+ i
-      i+=1
+      //      i = i+1
     }
-    
+
   }
 
 }
