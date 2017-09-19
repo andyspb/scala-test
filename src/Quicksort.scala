@@ -1,22 +1,26 @@
 
 
-class Quicksort {
-  def sort(a: Array[Int]): Array[Int] = {
-    if (a.length < 2) a
-    else {
-      val pivot = a(a.length / 2)
-      sort(a filter (pivot>)) ++ (a filter (pivot ==)) ++
-        sort(a filter (pivot <))
+object QuickSort {
+
+  def main(args: Array[String]) {
+    println("MergeSort >>> ")
+ 
+    val a1 = List[Int](11, 2, 12, 1, 0, 23, 7, 0, -2, 5)
+    println(a1.mkString(" "))
+    val l = sort(a1)
+    println(l.mkString(" "))
+
+    println("<<<")
+  }
+
+  def sort(list: List[Int]): List[Int] = {
+    list match {
+      case Nil => Nil
+      case piv :: tail => {
+        val (less, greater) = tail.partition(_ < piv)
+        sort(less) ::: piv :: sort(greater)
+      }
     }
   }
-}
 
-object TestQuicksort {
-  def main(args: Array[String]) = {
-    val quicksort = new Quicksort
-    val a = Array(5, 3, 2, 2, 1, 1, 9, 39, 219)
-    println(a.mkString(" "))
-
-    quicksort.sort(a).foreach(n => (print(n), print(" ")))
-  }
 }
