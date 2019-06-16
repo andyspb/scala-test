@@ -1,3 +1,4 @@
+package  com.test
 
 
 case class Person(firstName: String, lastName: String)

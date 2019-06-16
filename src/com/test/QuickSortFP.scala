@@ -1,3 +1,5 @@
+package  com.test
+
 object QuickSortFP extends App {
 
     // create an array of random 10m random ints

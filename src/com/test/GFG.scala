@@ -1,6 +1,5 @@
 
-
-
+package  com.test
 
 object GFG {
   def main(args: Array[String]) {

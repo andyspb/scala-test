@@ -1,3 +1,6 @@
+package  com.test
+
+
 object MergeSort {
 
   def main(args: Array[String]) {

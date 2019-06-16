@@ -1,4 +1,4 @@
-
+package  com.test
 
 abstract class Vehicle 
 case class Car(brand: String) extends Vehicle 

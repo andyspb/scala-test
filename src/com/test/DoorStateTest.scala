@@ -1,4 +1,4 @@
-
+package  com.test
 
 trait DoorState
 case object Open extends DoorState

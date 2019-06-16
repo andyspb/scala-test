@@ -1,3 +1,5 @@
+package  com.test
+
 import scala.annotation.tailrec
 
 object TailRec {
