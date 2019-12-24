@@ -15,7 +15,7 @@ object ClassTest {
   }
   
   def main(args: Array[String]) {
-    println("ClassTest >>> ")
+    println("ClassTest::main() >>> ")
 
     val me = Person("Daniel", "Spiewak")
     val first = me.firstName

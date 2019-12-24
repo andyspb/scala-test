@@ -6,6 +6,7 @@ case object Closed extends DoorState
 
 object DoorStateTest {
   def main(args: Array[String]) {
+    println("DoorStateTest::main()")
     
     val o = Open;
     val c = Closed
