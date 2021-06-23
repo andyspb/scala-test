@@ -2,3 +2,8 @@
 /build/
 /out/
 /target/
+/project/
+/project/target/
+/idea/
+/.idea/
+/.bsp/
