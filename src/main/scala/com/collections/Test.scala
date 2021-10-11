@@ -1,10 +1,6 @@
 package com.collections
 
 object Test {
-  def print_collection(a: Seq[Any]) {
-    a.foreach(e => print("%s ".format(e)))
-  }
-
   def main(args: Array[String]) {
     val numbers = Array(1, 2, 3, 4, 5, 1, 2, 3, 4, 5);
     val s = Set(5, 1, 2, 3, 4)
@@ -27,6 +23,10 @@ object Test {
 
     println
     print_collection(F)
+  }
+
+  def print_collection(a: Seq[Any]) {
+    a.foreach(e => print("%s ".format(e)))
   }
 
 }

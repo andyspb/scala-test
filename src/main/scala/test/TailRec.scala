@@ -5,7 +5,7 @@ import scala.annotation.tailrec
 object TailRec {
   def main(args: Array[String]) {
     println(sum(5))
-    
+
     println(tailSum(5, 0))
   }
 

@@ -68,6 +68,10 @@ bin/
 
 #sbt
 .bsp
+target/
+*.class
+.bloop/
+.metals
 
 
 # mac

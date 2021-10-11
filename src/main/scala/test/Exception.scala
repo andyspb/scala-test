@@ -19,8 +19,7 @@ object Exception {
         println("Arithmetic Exception occured.")
       }
     }
-    finally
-    {
+    finally {
       // Finally block will execute
       println("This is final block.")
     }

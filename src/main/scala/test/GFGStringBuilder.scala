@@ -2,8 +2,7 @@ package test
 
 object GFGStringBuilder {
   // Main method
-  def main(args: Array[String])
-  {
+  def main(args: Array[String]) {
 
     // Creating StringBuilder
     val x = new StringBuilder("Author");

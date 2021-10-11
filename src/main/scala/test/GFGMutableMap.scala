@@ -1,11 +1,9 @@
 package test
 
-object GFGMutableMap
-{
+object GFGMutableMap {
 
   // Main method
-  def main(args:Array[String])
-  {
+  def main(args: Array[String]) {
 
     // Creation of Map having key-value
     // pairs of type (String, Int)
@@ -14,7 +12,10 @@ object GFGMutableMap
     println("Empty Map: " + mapMut)
 
     // Adding new entry
-    mapMut += ("Charlie" -> 50)
+    mapMut("Charlie50") = 50
+    mapMut("Charlie51") = 51
+    mapMut("Charlie52") = 52
+    //    mapMut += ("Charlie52" -> 52)
 
     println("New Entry: " + mapMut)
   }

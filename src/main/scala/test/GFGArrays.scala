@@ -1,17 +1,15 @@
 package test
 
-object  GFGArrays {
+object GFGArrays {
   // Main method
-  def main(args: Array[String])
-  {
+  def main(args: Array[String]) {
     // allocating memory of 1D Array of string.
     var days = Array("Sunday", "Monday", "Tuesday",
       "Wednesday", "Thursday", "Friday",
-      "Saturday" )
+      "Saturday")
 
     println("Array elements are : ")
-    for ( m1 <-days )
-    {
+    for (m1 <- days) {
       println(m1)
     }
 

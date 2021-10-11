@@ -1,5 +1,5 @@
 package jetlore
 
 object Crowler {
-  
+
 }
