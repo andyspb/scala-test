@@ -4,13 +4,16 @@ import cats.effect.IO
 import cats.effect.IOApp.Simple
 import cats.effect.kernel.{Async, Sync}
 import fs2.{Pipe, Stream, text}
-import fs2.io.file.{Files, Path}
+import fs2.io.file.{Files, Path, delete}
 import org.slf4j.{Logger, LoggerFactory}
 import cats.syntax.flatMap._
 import cats.syntax.functor._
 
 import java.io.{BufferedWriter, File, FileWriter}
 import java.nio.file.Paths
+import java.time.format.DateTimeFormatter
+import java.util.Calendar
+import scala.collection.mutable.ListBuffer
 import scala.io.Codec
 
 
@@ -34,7 +37,13 @@ object UniqueLong extends Simple {
     println(b)
   }
 
-
+  def deleteOldFiles(dirPath: String): Unit =  {
+    val millis = System.currentTimeMillis() - 2 * 24 * 60 * 60 * 1000
+    val dir = new File(dirPath)
+    if (dir.exists && dir.isDirectory) {
+      dir.listFiles.filter(_.isFile).filter(_.getPath.endsWith(".json")).filter(_.lastModified() < millis).map(_.delete)
+    }
+  }
 
 
   def testWriteFile[F[_] :Async](bytesIO: Stream[F, Byte], idFile: String): F[Unit] = {
@@ -63,6 +72,9 @@ object UniqueLong extends Simple {
     val id = getRandomLongString()
 
     val bytesIO: Stream[IO, Byte] = Stream(49, 44, 50, 44, 51, 44, 52, 44, 53)
+
+    deleteOldFiles(currentDirectory);
+
     testWriteFile[IO](bytesIO, id)
   }
 }
