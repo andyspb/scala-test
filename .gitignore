@@ -67,7 +67,7 @@ bin/
 .idea_modules/
 
 #sbt
-.bsp/sbt.json
+/.bsp/sbt.json
 target/
 *.class
 .bloop/
