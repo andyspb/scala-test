@@ -31,6 +31,8 @@ libraryDependencies ++= Seq(
 libraryDependencies += "co.fs2" %% "fs2-core" % "3.1.6"
 libraryDependencies += "co.fs2" %% "fs2-io" % "3.1.6"
 libraryDependencies += "co.fs2" %% "fs2-reactive-streams" % "3.1.6"
+libraryDependencies += "com.lihaoyi" %% "pprint" % "0.7.0"
+libraryDependencies += "com.lihaoyi" %% "fastparse" % "2.3.3"
 
 //, "co.fs2" %% "fs2-core" % "3.2.7"
 //, "co.fs2" %% "fs2-io" % "3.2.7"
