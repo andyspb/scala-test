@@ -68,6 +68,7 @@ bin/
 
 #sbt
 .bsp
+.bsp/
 target/
 *.class
 .bloop/
